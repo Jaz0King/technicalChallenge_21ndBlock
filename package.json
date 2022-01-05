@@ -1,0 +1,28 @@
+{
+  "name": "tecnicalchallenge",
+  "version": "1.0.0",
+  "description": "Tecnical Challenge Stage 3 ",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0"
+  },
+  "scripts": {
+    "test": "npm test "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaz0King/technicalChallenge_2ndBlock.git"
+  },
+  "keywords": [
+    "TCS3"
+  ],
+  "author": "Jaziel Ramírez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jaz0King/technicalChallenge_2ndBlock/issues"
+  },
+  "homepage": "https://github.com/Jaz0King/technicalChallenge_2ndBlock#readme"
+}
