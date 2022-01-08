@@ -1,4 +1,4 @@
-# Lista de Porósitos y Metas de año nuevo
+# Lista de Porósitos 2022
 ## Technical Challenge
 ---
 
@@ -34,11 +34,14 @@ Esta aplicación nos permite crear una lista de proósitos de año nuevo, en don
 - Primer pantalla: LogIn
   ![LogIn](./assets/img/Pantalla1.png)
 
+
 - Segunda pantalla: Listas de Propósitos
   ![Listas de Propósitos](./assets/img/Pantalla2.png)
 
+
 - Tercer pantalla: Vista de la Lista de propósitos 
   ![Lista de propósitos](./assets/img/Pantalla3.png)
+  
 ---
 
 ## 4. Producto Final
