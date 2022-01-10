@@ -1,9 +1,9 @@
 //Se declaran los arreglos para añadir los registros 
 let arrProp =[]
 
-const db = firebase.firestore();
+var db = firebase.firestore();
 
-const onGetData = (callback) => db.collection(ListaP).onSnapshot(callback)
+var onGetData = (callback) => db.collection(ListaP).onSnapshot(callback)
 
 export async function traerDatos() {
     onGetData((querySnapshot) => {

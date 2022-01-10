@@ -1,8 +1,5 @@
-//Importando la funcion para traer los datos guardados
-//import {traerDatos} from "./data.js"
-//traerDatos()
 
-//Botonoes de las 5 listas de proósitos
+//Botonoes de las 5 listas de propósitos
 let personal = document.getElementById('per')
 let profesional = document.getElementById('pro')
 let relaciones = document.getElementById('rela')
