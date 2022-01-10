@@ -1,3 +1,7 @@
+//Importando la funcion para traer los datos guardados
+//import {traerDatos} from "./data.js"
+//traerDatos()
+
 //Botonoes de las 5 listas de proósitos
 let personal = document.getElementById('per')
 let profesional = document.getElementById('pro')
@@ -5,7 +9,7 @@ let relaciones = document.getElementById('rela')
 let familia = document.getElementById('fam')
 let salud = document.getElementById('salud')
 
-introAudio1 ()
+//introAudio1 ()
 //Al dar click en el botón de la la lista de propósitos en el almacenaje local en el navegador
 personal.addEventListener('click', () =>{
     console.log('personal')
@@ -38,10 +42,10 @@ salud.addEventListener('click', () =>{
     window.location.href = "./index.html"
 })
 
-//Funcion para el sonido de entrara a las listas
+/*Funcion para el sonido de entrara a las listas
 function introAudio1 () {
     const audioIntro1 = document.getElementById("intro1")
     audioIntro1.volume = 0.8;
     audioIntro1.play()
 }
-
+*/

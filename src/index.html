@@ -27,73 +27,73 @@
                     <h1>Mis Propósitos 2022</h1>
                 </div>
             </header>
-            <div class="propósitos" id="prop">
+            <div class="contLista" id="prop">
                 <div id="lista">  
-                    <div><h2>Lista de Propósitos</h2></div>
+                    <div id="titulo"><h2>Lista de Propósitos</h2></div>
                     <div id="tipoLista">
                         <h2>PERSONALES
                         </h2>
                     </div>
-                    <div id="agregar" class="d-grid gap-2 col-6 mx-auto">
-                        <button type="button" class="btn btn-dark" id="nuevoProp">Agregar Nuevo Propósito 
-                        </button>
-                    </div>
-                    <table class="table table-dark table-hover" >
+                    <div id="topModal">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                           Agregar Nuevo Propósito
+                           </button>
+                           <!-- Modal -->
+                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div class="modal-dialog">
+                               <div class="modal-content">
+                               <div class="modal-header">
+                                   <h2 class="modal-title" id="exampleModalLabel">Nuevo Propósito</h2>
+                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                               <div class="modal-body">
+                                   <div class="mb-3">
+                                       <label for="exampleFormControlInput1" class="form-label">Nombre del Propósito:</label>
+                                       <input type="text" class="form-control" id="nombreProp" placeholder="Dame un nombre">
+                                     </div>
+                                     <div class="mb-3">
+                                       <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
+                                       <textarea type="text" class="form-control" id="descProp" rows="3" placeholder="Añade una breve descripción, añade pistas para lograr tu propósito."></textarea>
+                                     </div>
+                               </div>
+                               <div class="modal-footer">
+                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                   <button type="button" class="btn btn-primary" id="btnCrear" >Crear</button>
+                               </div>
+                               </div>
+                           </div>
+                           </div>
+                       </div>
+                       <!---- Tabla ---->
+                       <table class="table table-dark table-hover" id="contTable">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Nombre</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
                           </tr>
                           <tr>
                             <th scope="row">2</th>
                             <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
                           </tr>
                           <tr>
                             <th scope="row">3</th>
                             <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
                           </tr>
                         </tbody>
-                      </table>  
-                </div>
-                <div id="botones">
-                    <button id="btnListas" type="button" class="btn btn-"> Ver Listas </button>
-                    <button id="btnReturn" type="button" class="btn btn-"> Salir </button>
-                </div>
-            </div>
-
+                      </table>      
+                    <div id="botones">
+                        <button id="btnListas" type="button" class="btn btn-outline-warning"> Ver Listas </button>
+                        <button id="btnReturn" type="button" class="btn btn-outline-danger"> Salir </button>
+                    </div>   
+                </div>    
+            </div>    
             <footer id="footer" role="contentinfo">         
                 <a href="https://github.com/Jaz0King" class="me-4 text-reset">
                     <i class="fab fa-github"> Repo </i>
@@ -103,6 +103,23 @@
                   </a>  
             </footer>    
         </main>
+        <!---- Firebase ---->
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
+            const firebaseConfig = {
+            apiKey: "AIzaSyAisqOd5YhhB3NpqKBfeXq3k4TKUC7-TpA",
+            authDomain: "propositos2022-f6d65.firebaseapp.com",
+            projectId: "propositos2022-f6d65",
+            storageBucket: "propositos2022-f6d65.appspot.com",
+            messagingSenderId: "45764710511",
+            appId: "1:45764710511:web:8a8075c6fc93b42c0f7d9a"
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="index.js" async defer></script>
     </body>
 </html>
