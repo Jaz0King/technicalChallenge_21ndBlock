@@ -35,7 +35,7 @@
                         </h2>
                     </div>
                     <div id="topModal">
-                        <!-- Button trigger modal -->
+                        <!-- Boton trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                            Agregar Nuevo Propósito
                            </button>
@@ -65,8 +65,19 @@
                            </div>
                            </div>
                        </div>
-                       <!---- Tabla ---->
-                       <div class="tab" id="contTable"> 
+                       <!-- Tabla -->
+                       <div class="tab" > 
+                        <table class="table table-dark table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Descripción</th>
+                              </tr>
+                            </thead>
+                            <tbody id="contTable">
+                            </tbody>
+                          </table>
                      </div>      
                     <div id="botones">
                         <button id="btnListas" type="button" class="btn btn-outline-warning"> Ver Listas </button>
@@ -100,6 +111,6 @@
         </script>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="index.js" async defer></script>
+        <script type="module" src="index.js"></script>
     </body>
 </html>
