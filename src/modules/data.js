@@ -26,7 +26,7 @@ crearProp.addEventListener('click', async (e)=> {
  
  //console.log(obj)
  await saveObj(obj);
- 
+
  setTimeout(() => {
   alert('¡PROPÓSITO AÑADIDO, AHORA ES UN RETO!')
   window.location.href = "./index.html"
@@ -85,7 +85,7 @@ const pintarProp = () => {
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                          <h2 class="modal-title" id="exampleModalLabel">${prop.nombre} </h2>
+                          <h3 class="modal-title" id="exampleModalLabel">${prop.nombre} </h3>
                           </div>
                           <div class="modal-body">
                           <ul class="list-group list-group-flush">
@@ -106,8 +106,12 @@ const pintarProp = () => {
       } 
       const logrado = document.getElementById('done')
       logrado.addEventListener('click', () =>{
+        
+        logrado.innerHTML = `
+        <audio autoplay><source src="../assets/audio/avengers.mp3" type="video/mp4"></audio>
+        `
         alert("¡FELICIDADES! Estoy muy orgulloso de tí, sabía que lo lograrías.")
-
+        
       })
       
   }
