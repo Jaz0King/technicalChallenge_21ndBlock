@@ -4,7 +4,7 @@
   }
   
   body {
-    background-image: url(../assets/imágenes/);
+    background-color: #000000;
   }
   
   main {
@@ -22,10 +22,19 @@
 
   header {
     grid-area: header;
-    background-color: transparent;
-    border-radius: 10px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #logo{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    border-radius: 220px;
+    box-shadow: 10px 10px 90px 29px #fffffff3;
   }
 
   #prop {
@@ -49,10 +58,16 @@
 
   footer {
     grid-area: footer;
-    background-color: transparent;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
+    color: rgb(255, 255, 255);
+  }
+
+
+
+  h1,h2{
+    color: rgb(255, 255, 255);
+    font-family: 'Stick No Bills', sans-serif;
   }
 
   #lista{
@@ -68,6 +83,28 @@
     align-items: center;
     margin: 1vh;
     align-items: center;
+  }
+
+  .btn-outline-warning,
+  .btn-outline-danger {
+    margin-top: 10px;
+    grid-area: entrar;
+    border-radius: 15px;
+    font-family: 'Days One', sans-serif;
+    box-shadow: 0px 0px 20px 2px #ffffffb3;
+    
+  }
+
+  #btnP{
+    font-family: 'Days One', sans-serif;
+    box-shadow: 0px 0px 30px 2px #ffffffb3;
+  }
+
+  #btnP1{
+    background-color: #ffc107;
+  }
+  #btnP2{
+    color: #dc3545;
   }
 
   .input-group {
@@ -100,4 +137,14 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+@media only screen and (max-width: 300px) {
+  img {
+     height: 10vh;
+     margin-top: 2px;
+   }
+
+   #footer {
+    margin-top: 2px;
+  }
+ }
 

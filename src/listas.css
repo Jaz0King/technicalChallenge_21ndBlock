@@ -4,7 +4,7 @@
   }
 
   body{
-    background-color: #2a2f33;
+    background-color: #000000;
   }
 
 
@@ -13,90 +13,168 @@
     height: 100vh;
     width: 100%;
     gap: 1% 1%;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr ;
     grid-template-rows: Document 1fr 1fr 1fr;
     grid-template-areas:
-     "header header header "
-     "contTitle contTitle contTitle"
-     "ajusco izta chapul";
+     " header header header "
+     " contTitle contTitle contTitle "
+     " contListas contListas contListas";
   }
   
   header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 40vh;
-    flex-direction: column;
-    grid-area: header;
   }
 
-  img{
+  #logo{
+    grid-area: header;
     display: flex;
-    margin: 40px;
+    margin-top: 20px;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
-    border-radius: 225px;
-    box-shadow:  10px 12px 90px 12px  rgba(8, 216, 39, 0.60);
+    height: 40vh;
+    border-radius: 220px;
+    box-shadow: 10px 10px 90px 29px #fffffff3;
   }
 
   #contTitle {
     grid-area: contTitle;
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
   }
 
-  #ajusco {
-    grid-area: ajusco;
+  #contListas {
+    grid-area: contListas;
+    padding-bottom: 40px;
+  }
+
+  #divPer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 40px 40px 340px;
-    border-radius: 225px;
   }
 
-  #izta {
-    grid-area: izta;
+  #divPro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    border-radius: 225px;
   }
 
-  #chapul {
-    grid-area: chapul; 
+  #divRela {
     display: flex;
     flex-direction: column;
-    padding: 10px 340px 40px 40px;
     align-items: center;
-    border-radius: 225px; 
   }
 
-  #sAju{
-    border-radius: 225px;
-    box-shadow:  1px 1px 99px 40px rgb(209 65 154); 
-    }
-    #sIzt{
-      border-radius: 225px;
-      box-shadow:  1px 1px 99px 40px rgb(72 124 227);
-    }  
-    #sCha {
-      border-radius: 225px;
-      box-shadow:  1px 1px 99px 25px rgb(186 205 78);
-    }
+  #divFam {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  #divSalud {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
 
   h1{
     color: rgb(255, 255, 255);
     text-align: center;
+    font-size: 9.5em;
     font-family: 'Stick No Bills', sans-serif;
-    text-shadow: 15px 15px 2px rgb(1, 1, 1);
-    font-size: 3em;
+    text-shadow: 10px 10px 3px rgba(3, 3, 3, 0.8);
   }
 
   h2{
-    color: rgb(255, 255, 255);
     text-align: center;
-    font-family: 'Stick No Bills', sans-serif;
-    font-size: 1.6em;
+    font-family: 'Days One', sans-serif;
+    font-size: 1.5em;
+  }
+
+  button{
+    width: 40em;
+    margin-top: 10px;
+    grid-area: entrar;
+    border-radius: 15px;
+    font-family: 'Days One', sans-serif;
+    box-shadow: 0px 0px 30px 2px #ffffffb3;
+  }
+
+  .btn,
+  .btn-outline-info, 
+  .btn-outline-primary,
+  .btn-outline-success,
+  .btn-outline-warning,
+  .btn-outline-danger {
+    width: 40em;
+    margin-top: 10px;
+    grid-area: entrar;
+    border-radius: 15px;
+    font-family: 'Days One', sans-serif;
+    box-shadow: 0px 0px 30px 2px #ffffffb3;
+    color: #000000;
+    background-color:#ffffff;
+    border-color:#000000;
+  }
+
+  @media only screen and (max-width: 550px){
+    
+    main{
+      display: grid;
+      height: 100vh;
+      width: 100%;
+      gap: 1% 1%;
+      grid-template-columns: 1fr ;
+      grid-template-rows: Document 1fr 1fr 1fr;
+      grid-template-areas:
+       " header header header "
+       " contTitle contTitle contTitle "
+       " contListas contListas contListas";
+    }
+
+    #logo {
+      height: 39vh;
+        margin: 5px;
+        border-radius: 225px;
+      }
+
+      #contListas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 225px; 
+        padding: 3px;
+      } 
+
+      #contTitle{
+        margin: 0;
+        padding: 0;
+      }
+
+    header {
+        height: 40vh; 
+    }
+
+    h1{
+      font-size: 2.6em;
+    }
+
+    h2{
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+
+
+    .btn,
+    .btn-outline-info, 
+    .btn-outline-primary,
+    .btn-outline-success,
+    .btn-outline-warning,
+    .btn-outline-dark {
+      width: 18em;
+    }
+
   }
