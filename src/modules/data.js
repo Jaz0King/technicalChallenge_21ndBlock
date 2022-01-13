@@ -1,11 +1,11 @@
 const listaP = localStorage['objectToPass']             //Variable para traer los datos de la pantalla listas 
 const db = firebase.firestore();                         //Variable para traer los datos de la base de datos 
 const crearProp = document.getElementById('btnCrear') 
-const number = document.getElementById('enu')
+
 //Se declaran los arreglos para añadir los registros    
 let arrProp = []       
 let dataRegistro = []
-let contador = 0
+
 
 
 const onGetData = (callback) => db.collection(listaP).onSnapshot(callback)
@@ -28,9 +28,9 @@ crearProp.addEventListener('click', async (e)=> {
  await saveObj(obj);
  
  setTimeout(() => {
-  alert('PROPÓSITO AÑADIDO')
+  alert('¡PROPÓSITO AÑADIDO, AHORA ES UN RETO!')
   window.location.href = "./index.html"
- }, 800)
+ }, 500)
  
 })
 
@@ -59,11 +59,13 @@ export async function traerDatos() {
 
 
 
+
   // Funcionalidad para pintar dinámicamente la Lista de propósitos
-let pintarProp = () => {
+const pintarProp = () => {
   
   document.getElementById('contTable').innerHTML = " "; 
    // console.log(arrProp.length)
+  
      for (let prop of arrProp) {
          document.getElementById("contTable").innerHTML += `
                   <tbody>
@@ -83,7 +85,7 @@ let pintarProp = () => {
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"  id="staticBackdropLabel"> ${prop.nombre} </h5>
+                          <h2 class="modal-title" id="exampleModalLabel">${prop.nombre} </h2>
                           </div>
                           <div class="modal-body">
                           <ul class="list-group list-group-flush">
@@ -94,14 +96,19 @@ let pintarProp = () => {
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Cumplido</button>
+                            <button type="button" class="btn btn-primary" id="done">Cumplido</button>
                           </div>
                         </div>
                       </div>
                     </div>   
                     </div>
                  </div> ` 
-      }
+      } 
+      const logrado = document.getElementById('done')
+      logrado.addEventListener('click', () =>{
+        alert("¡FELICIDADES! Estoy muy orgulloso de tí, sabía que lo lograrías.")
+
+      })
       
   }
 

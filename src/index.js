@@ -13,11 +13,6 @@ const btnListas = document.getElementById('btnListas')
 const btnReturn = document.getElementById('btnReturn')
 const listaP = localStorage['objectToPass']
  
-  /*
-  btnCrear.addEventListener('click', () =>{
-    alert("Clean")
-    window.location.href = "./index.html"    
-  })*/
 
   //Pinta dinamicamente el nombre de la lista de propósitos
 if (listaP == 'personal') {
