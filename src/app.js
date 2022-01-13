@@ -1,43 +1,18 @@
 
-//Botonoes de las 5 listas de propósitos
-let personal = document.getElementById('per')
-let profesional = document.getElementById('pro')
-let relaciones = document.getElementById('rela')
-let familia = document.getElementById('fam')
-let salud = document.getElementById('salud')
+import { initializeApp } from "https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js";
 
-//introAudio1 ()
-//Al dar click en el botón de la la lista de propósitos en el almacenaje local en el navegador
-personal.addEventListener('click', () =>{
-    console.log('personal')
-    let data = "personal"
-    localStorage.setItem('objectToPass',data)
-    window.location.href = "./index.html"
-})
-profesional.addEventListener('click', () =>{
-    console.log('profesional')
-    let data = "profesional"
-    localStorage.setItem('objectToPass',data)
-    window.location.href = "./index.html"
-})
-relaciones.addEventListener('click', () =>{
-    console.log('relaciones')
-    let data = "relaciones"
-    localStorage.setItem('objectToPass',data)
-    window.location.href = "./index.html"
-})
-familia.addEventListener('click', () =>{
-    console.log('familia')
-    let data = "familia"
-    localStorage.setItem('objectToPass',data)
-    window.location.href = "./index.html"
-})
-salud.addEventListener('click', () =>{
-    console.log('salud')
-    let data = "salud"
-    localStorage.setItem('objectToPass',data)
-    window.location.href = "./index.html"
-})
+const firebaseConfig = {
+    apiKey: "AIzaSyAisqOd5YhhB3NpqKBfeXq3k4TKUC7-TpA",
+    authDomain: "propositos2022-f6d65.firebaseapp.com",
+    projectId: "propositos2022-f6d65",
+    storageBucket: "propositos2022-f6d65.appspot.com",
+    messagingSenderId: "45764710511",
+    appId: "1:45764710511:web:8a8075c6fc93b42c0f7d9a"
+    };
+   
+   
+const app = initializeApp(firebaseConfig);
+
 
 /*Funcion para el sonido de entrara a las listas
 function introAudio1 () {
