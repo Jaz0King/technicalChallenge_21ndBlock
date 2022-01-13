@@ -14,25 +14,6 @@
     grid-area: header;
   }
 
-#logo {
-    display: flex;
-    margin-top: 60px;
-    align-items: center;
-    flex-direction: column;
-    height: 50vh;
-    border-radius: 225px;
-    box-shadow: 10px 10px 90px 29px #fffffff3;
-  }
-
-  #tronchaToro {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
-    flex-direction: column;
-    height: 20vh;
-    border-radius: 225px;
-  }
-
   main {
     display: flex;
     align-items: center;
@@ -49,6 +30,15 @@
       "pass pass"
       "entrar entrar"
       "footer footer";
+  }
+  #logo {
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    border-radius: 250px;
+    box-shadow: 10px 10px 90px 29px #fffffff3;
   }
 
 
