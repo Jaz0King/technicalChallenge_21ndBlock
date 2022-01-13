@@ -1,0 +1,127 @@
+* {
+    margin: 1px;
+    padding: 1px;
+  }
+
+  body{
+    background-color: #2a2f33;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-area: header;
+  }
+
+  #logo{
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    border-radius: 225px;
+    box-shadow: 10px 12px 90px 12px  rgba(8, 216, 39, 0.60);
+  }
+
+  #tronchaToro {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+    border-radius: 225px;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    gap: 1% 1%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: Document 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header "
+      "login login"
+      "ids ids"
+      "pass pass"
+      "entrar entrar"
+      "footer footer";
+  }
+
+
+  #login {
+    margin-top: 20px;
+    display: flex;
+    grid-area: login;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 1.5em;
+    text-shadow: 10px 10px 3px rgba(3, 3, 3, 0.8)
+  }
+
+
+  #inputP1, #inputP2{
+    grid-area: pass;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #2a2f33;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  #botonEntrar {
+    width: 120px;
+    margin-top: 10px;
+    background-color: #73f340;
+    grid-area: entrar;
+    border-radius: 15px;
+    font-family: 'Days One', sans-serif;
+  }
+
+  p{
+    font-size:2em;
+  }
+
+  #footer {
+    grid-area: footer;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .me-4 {
+    margin: 1rem; 
+  }
+
+  a{
+    font-size:3vh;
+  }
+
+  @media only screen and (max-width: 550px) {
+    #logo{
+    margin-top: 10px;
+    }
+    #login,#tronchaToro {
+      margin-top: 2px;
+    }
+    img {
+      height: 40vh;
+    }
+
+  }
+
+  @media only screen and (max-width: 300px) {
+    img {
+       height: 10vh;
+       margin-top: 2px;
+     }
+
+     #footer {
+      margin-top: 2px;
+    }
+   }
+ 

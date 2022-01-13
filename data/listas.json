@@ -1,0 +1,30 @@
+{
+    "Listas": {
+        "Personales" : {
+            "nombre": "",
+            "fecha": "",
+            "descripcion": ""   
+        },
+        "Profesionales" : {
+            "nombre": "",
+            "fecha": "",
+            "descripcion": ""   
+        },
+        "Relaciones" : {
+            "nombre": "",
+            "fecha": "",
+            "descripcion": ""   
+        },
+        "Familya" : {
+            "nombre": "",
+            "fecha": "",
+            "descripcion": ""   
+        },
+        "Salud y Aprendizaje" : {
+            "nombre": "",
+            "fecha": "",
+            "descripcion": ""   
+        }
+        
+    }
+}    

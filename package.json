@@ -1,7 +1,7 @@
 {
-  "name": "tecnicalchallenge",
+  "name": "technicalchallenge",
   "version": "1.0.0",
-  "description": "Tecnical Challenge Stage 3 ",
+  "description": "Lista de Propósitos de Año Nuevo. Technical Challenge Stage 3 ",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/Jaz0King/technicalChallenge_2ndBlock.git"
   },
   "keywords": [
-    "TCS3"
+    "C.R.U.D. Propositos y Metas de Año Nuevo"
   ],
   "author": "Jaziel Ramírez",
   "license": "MIT",
