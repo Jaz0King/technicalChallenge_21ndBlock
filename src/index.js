@@ -1,6 +1,7 @@
 import {traerDatos} from "./modules/data.js"
 traerDatos()
 //document.addEventListener('DOMContentLoaded',traerDatos,false)
+//Función para activar el calendario del modal
 $(function() {
   $('#datepicker').datepicker();
 });

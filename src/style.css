@@ -70,6 +70,11 @@
     font-family: 'Stick No Bills', sans-serif;
   }
 
+  h3{
+    color: #000000;
+    font-family: 'Days One', sans-serif;
+  }
+
   #lista{
     justify-content: center;
     align-items: center;

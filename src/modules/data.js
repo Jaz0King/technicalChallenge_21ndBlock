@@ -6,11 +6,10 @@ const crearProp = document.getElementById('btnCrear')
 let arrProp = []       
 let dataRegistro = []
 
-
-
+//Variable para traer la data de firebase
 const onGetData = (callback) => db.collection(listaP).onSnapshot(callback)
 
-
+//Función para capturar los datos 
 crearProp.addEventListener('click', async (e)=> {
  e.preventDefault();
  const obj = {
@@ -18,7 +17,6 @@ crearProp.addEventListener('click', async (e)=> {
        descripcion: document.getElementById('descProp').value,
        fecha: document.getElementById('fechaProp').value,
        fechaFin: document.getElementById('fechaPropCad').value,
-
  }
 
  traerDatos()  
@@ -26,7 +24,7 @@ crearProp.addEventListener('click', async (e)=> {
  
  //console.log(obj)
  await saveObj(obj);
- 
+
  setTimeout(() => {
   alert('¡PROPÓSITO AÑADIDO, AHORA ES UN RETO!')
   window.location.href = "./index.html"
@@ -56,11 +54,7 @@ export async function traerDatos() {
   })
 }
 
-
-
-
-
-  // Funcionalidad para pintar dinámicamente la Lista de propósitos
+// Funcionalidad para pintar dinámicamente el propósito la Lista de propósitos
 const pintarProp = () => {
   
   document.getElementById('contTable').innerHTML = " "; 
@@ -68,8 +62,8 @@ const pintarProp = () => {
   
      for (let prop of arrProp) {
          document.getElementById("contTable").innerHTML += `
-                  <tbody>
-                    <tr>
+                  <tbody id="tab">
+                    <tr id="tab1">
                       <th scope="row" id="enu">${prop.fecha} </th>
                       <td value="${prop}" data-bs-target="#staticBackdrop${prop.id}"> ${prop.nombre} </td>
                       <td> 
@@ -85,7 +79,7 @@ const pintarProp = () => {
                       <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                          <h2 class="modal-title" id="exampleModalLabel">${prop.nombre} </h2>
+                          <h3 class="modal-title" id="exampleModalLabel">${prop.nombre} </h3>
                           </div>
                           <div class="modal-body">
                           <ul class="list-group list-group-flush">
@@ -106,8 +100,14 @@ const pintarProp = () => {
       } 
       const logrado = document.getElementById('done')
       logrado.addEventListener('click', () =>{
+        
+        logrado.innerHTML = `
+        <audio autoplay><source src="../assets/audio/avengers.mp3" type="video/mp4"></audio>
+        `
         alert("¡FELICIDADES! Estoy muy orgulloso de tí, sabía que lo lograrías.")
-
+        let bgc = document.getElementById('tab1')
+        bgc.style.color = "#dc3545"
+        
       })
       
   }

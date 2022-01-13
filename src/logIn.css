@@ -52,7 +52,7 @@
   }
 
 
-  #login {
+  p {
     margin-top: 20px;
     display: flex;
     grid-area: login;
@@ -62,7 +62,8 @@
     font-size: 1.5em;
     text-shadow: 10px 10px 3px rgba(3, 3, 3, 0.8);
   }
-
+  
+  
 
   #inputP1, #inputP2{
     grid-area: pass;
