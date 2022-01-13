@@ -1,13 +1,17 @@
-import {traerDatos} from "./data.js"
+import {traerDatos} from "./modules/data.js"
 traerDatos()
 //document.addEventListener('DOMContentLoaded',traerDatos,false)
-  
+$(function() {
+  $('#datepicker').datepicker();
+});
+$(function() {
+  $('#datepicker2').datepicker();
+});
 
 // Botones de regreso a listas de propósitos y salida 
-var btnListas = document.getElementById('btnListas')
-var btnReturn = document.getElementById('btnReturn')
-//let limpiarP = document.getElementById('btnCrear')
-var listaP = localStorage['objectToPass']
+const btnListas = document.getElementById('btnListas')
+const btnReturn = document.getElementById('btnReturn')
+const listaP = localStorage['objectToPass']
  
   /*
   btnCrear.addEventListener('click', () =>{

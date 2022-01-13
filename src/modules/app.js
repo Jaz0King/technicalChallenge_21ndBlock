@@ -14,10 +14,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
-/*Funcion para el sonido de entrara a las listas
-function introAudio1 () {
-    const audioIntro1 = document.getElementById("intro1")
-    audioIntro1.volume = 0.8;
-    audioIntro1.play()
-}
-*/
+
