@@ -54,10 +54,3 @@ btnListas.addEventListener('click', () => {
 
   
 
-// Funcionalidad para introducir Nuevo Propósito a la lista
-
-// Funcionalidad para pintar dinámicamente la Lista de propósitos
-
-// Funcionalidad para abrir el modal de cada propósitos 
-// Funcionalidad para marcar las tareas ya echas
-
