@@ -4,13 +4,12 @@ entrar.addEventListener('click', () =>{
     usuario= document.getElementById('inputP1').value
     contraseña= document.getElementById('inputP2').value
     audio = document.getElementById('login')
-    bcs = document.getElementById('login')
     console.log(usuario,contraseña)
 //Y se redirige a las Listas de Proósitos 2022    
     if(usuario=="JazitoAir" && contraseña=="123") {
         window.location.href = "./listas.html"
        
-//Si no es el "id" y la "contraseña" reproducirá un audio y se mostrara el video de error        
+//Si no es el "id" y la "contraseña" reproducirá un audio y se mostrara el alert de error        
     } else {    
         audio.innerHTML = `
         <audio autoplay><source src="../assets/audio/palabramagica.mp3" type="video/mp4"></audio>
