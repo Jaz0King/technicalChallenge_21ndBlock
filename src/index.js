@@ -49,7 +49,7 @@ if (listaP == 'personal') {
 
 
 btnReturn.addEventListener('click', () => {
-    window.location.href = "./login.html"
+    window.location.href = "./logIn.html"
   })
 
 btnListas.addEventListener('click', () => {
