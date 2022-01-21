@@ -33,11 +33,18 @@
     align-items: center;
     flex-direction: column;
     height: 40vh;
-    border-radius: 15px;
-    
+    border-radius: 180px; 
   }
 
-  
+  #btnDone{
+    color: #fff;
+    background-color: #ff0062;
+    border-color: #ff000d;
+  }
+
+  .i{
+    height: 50vh;
+  }
 
   .modal-backdrop {
     position: fixed;

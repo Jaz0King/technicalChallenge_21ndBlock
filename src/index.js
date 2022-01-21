@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal${prop.id}">
               Ver Mas
             </button>
+            <button type="button" class="btn-delete" id="btnDone" data-id="${prop.id}">Cumplido</button>
             
           </td>
         </tr>
@@ -43,7 +44,6 @@ window.addEventListener('DOMContentLoaded', async () => {
               </div>
               <div class="modal-footer">
               <button type="button" class="btn-edit" id="btnEdit" data-id="${prop.id}" data-bs-toggle="modal" data-bs-target="#exampleModal" >Editar</button>
-              <button type="button" class="btn-delete" id="btnDone" data-id="${prop.id}">Cumplido</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
