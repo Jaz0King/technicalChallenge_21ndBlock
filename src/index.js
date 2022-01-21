@@ -1,7 +1,9 @@
 import {saveTask, getTask, onGetTask, deleteTask, editTask, updateTask} from './modules/data.js';
 const taskForm = document.getElementById("task-form")
 const taskCont = document.getElementById('task-container')
+//Variable para encender y apagar la edición del propósito
 let editing = false;
+//Variable para agregar ids de los propósitos
 let id = '';
 
 
@@ -10,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     onGetTask((querySnapshot)=> {
 
     let html = ''
-    //Mostrar las tareas dinámicamente
+    //Mostrar las tareas dinámicamente en la página
     querySnapshot.forEach(doc =>{
         const prop = doc.data()
         prop.id = doc.id
@@ -62,7 +64,7 @@ window.addEventListener('DOMContentLoaded', async () => {
           deleteTask(dataset.id)
       })
     })
-
+    
     const btnEdit = taskCont.querySelectorAll('.btn-edit')
     btnEdit.forEach(btn => {
       btn.addEventListener('click', async (e) => {
