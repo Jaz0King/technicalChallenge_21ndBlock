@@ -46,7 +46,7 @@ Esta aplicación nos permite crear una lista de proósitos de año nuevo, en don
 
 ## 4. Producto Final
 
-Link de la app: 
-Id:
-Pass: 
+- Link de la app: https://jaz0king.github.io/technicalChallenge_2ndBlock/src/listas.html 
+- Id: JazitoAir
+- Pass: 123
 

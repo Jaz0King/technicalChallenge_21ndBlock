@@ -4,7 +4,7 @@
   }
 
   body{
-    background-color: #000000;
+    background-image: url(../assets/img/bgs.jpg);
   }
 
   header {
@@ -12,25 +12,6 @@
     align-items: center;
     flex-direction: column;
     grid-area: header;
-  }
-
-#logo {
-    display: flex;
-    margin-top: 60px;
-    align-items: center;
-    flex-direction: column;
-    height: 50vh;
-    border-radius: 225px;
-    box-shadow: 10px 10px 90px 29px #fffffff3;
-  }
-
-  #tronchaToro {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
-    flex-direction: column;
-    height: 20vh;
-    border-radius: 225px;
   }
 
   main {
@@ -49,6 +30,14 @@
       "pass pass"
       "entrar entrar"
       "footer footer";
+  }
+  #logo {
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    border-radius: 180px;
   }
 
 
@@ -102,24 +91,20 @@
     font-size:3vh;
   }
 
-  @media only screen and (max-width: 550px) {
-    #logo{
-    margin-top: 10px;
-    }
-    #login,#tronchaToro {
-      margin-top: 2px;
-    }
-    img {
-      height: 40vh;
-    }
-
-  }
+  
 
   @media only screen and (max-width: 300px) {
     img {
        height: 10vh;
        margin-top: 2px;
      }
+
+     #contListas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 103px;
+  }
 
      #footer {
       margin-top: 2px;
