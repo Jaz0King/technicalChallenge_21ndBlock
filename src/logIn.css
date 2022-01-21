@@ -4,7 +4,7 @@
   }
 
   body{
-    background-color: #000000;
+    background-image: url(../assets/img/bgs.jpg);
   }
 
   header {
@@ -37,8 +37,7 @@
     align-items: center;
     flex-direction: column;
     height: 50vh;
-    border-radius: 250px;
-    box-shadow: 10px 10px 90px 29px #fffffff3;
+    border-radius: 180px;
   }
 
 
@@ -92,24 +91,20 @@
     font-size:3vh;
   }
 
-  @media only screen and (max-width: 550px) {
-    #logo{
-    margin-top: 10px;
-    }
-    #login,#tronchaToro {
-      margin-top: 2px;
-    }
-    img {
-      height: 40vh;
-    }
-
-  }
+  
 
   @media only screen and (max-width: 300px) {
     img {
        height: 10vh;
        margin-top: 2px;
      }
+
+     #contListas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 103px;
+  }
 
      #footer {
       margin-top: 2px;

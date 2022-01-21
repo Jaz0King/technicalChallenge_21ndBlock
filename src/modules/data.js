@@ -1,10 +1,14 @@
-  // Import the functions you need from the SDKs you need
+  // Import funciones de firebase por SDK
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
   import { getFirestore, 
            collection, 
            addDoc, 
            getDocs,
-           onSnapshot } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js";
+           deleteDoc,
+           onSnapshot,
+           getDoc,
+           updateDoc,
+          doc } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js";
   import { listaP } from "../index.js"        
 
   const firebaseConfig = {
@@ -20,9 +24,19 @@
   const app = initializeApp(firebaseConfig);
   // Initialize Firestore
   const db = getFirestore();
+  //-------Cloud Funclions--------//
   // Funcion para agregar datos a firebase
-  export const saveTask = (nombre,description, fechaIni) => addDoc(collection(db,listaP), {nombre, description, fechaIni})
+  export const saveTask = (nombre,description, fechaIni) => addDoc(collection(db,listaP), {nombre, description, fechaIni});
   // Funcion para traer Datos de firebase
-  export const getTask = () => getDocs(collection(db,listaP))
+  export const getTask = () => getDocs(collection(db,listaP));
   // Funcion para actualizar los datos cuando cambien
-  export const onGetTask = (callback) => onSnapshot(collection(db,listaP),callback)
+  export const onGetTask = (callback) => onSnapshot(collection(db,listaP),callback);
+  // Funcion para eliminar propósito 
+  export const deleteTask = id => deleteDoc(doc(db, listaP, id));
+  // Funcion para editar propósito 
+  export const editTask = id => getDoc(doc(db, listaP, id));
+  // Función para actualizar los datos del propósito
+  export const updateTask = (id, newFields) => updateDoc(doc(db, listaP, id),newFields);
+
+
+

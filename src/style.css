@@ -4,7 +4,7 @@
   }
   
   body {
-    background-color: #000000;
+    background-image: url(../assets/img/bgs.jpg);
   }
   
   main {
@@ -33,9 +33,22 @@
     align-items: center;
     flex-direction: column;
     height: 40vh;
-    border-radius: 220px;
-    box-shadow: 10px 10px 90px 29px #fffffff3;
+    border-radius: 15px;
+    
   }
+
+  
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+  }
+  
 
   #prop {
     grid-area: prop;
